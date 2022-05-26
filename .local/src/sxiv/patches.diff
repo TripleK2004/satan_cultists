@@ -1,0 +1,46 @@
+diff --git a/patches.def.h b/patches.def.h
+index f9b8689..b075f6c 100644
+--- a/patches.def.h
++++ b/patches.def.h
+@@ -22,7 +22,7 @@
+  *
+  * https://github.com/muennich/sxiv/pull/428
+  */
+-#define ALLOW_ESCAPE_KEY_IN_EXTERNAL_KEY_HANDLER_PATCH 0
++#define ALLOW_ESCAPE_KEY_IN_EXTERNAL_KEY_HANDLER_PATCH 1
+ 
+ /* Adds alpha support not for transparency, but to allow sxiv to be embedded into applications
+  * that expects support it (e.g. tabbed with alpha patch).
+@@ -99,12 +99,12 @@
+  * The color can be specified by adding Sxiv.mark in your .Xresources file.
+  * https://github.com/muennich/sxiv/issues/294
+  */
+-#define MARK_BORDER_PATCH 0
++#define MARK_BORDER_PATCH 1
+ 
+ /* Shows the number of marked files in the thumbnail view.
+  * https://github.com/muennich/sxiv/issues/294
+  */
+-#define MARK_COUNT_PATCH 0
++#define MARK_COUNT_PATCH 1
+ 
+ /* Allows for the same keys used to scroll to be re-used for navigation if the image is not zoomed.
+  * https://github.com/muennich/sxiv/pull/368
+@@ -114,7 +114,7 @@
+ /* Adds fill scale mode.
+  * https://github.com/muennich/sxiv/pull/446
+  */
+-#define SCALE_FILL_MODE_PATCH 0
++#define SCALE_FILL_MODE_PATCH 1
+ 
+ /* Adds the option of having separate colors for the bar in thumbnail view (instead of re-using
+  * the foreground and background colors).
+@@ -124,7 +124,7 @@
+ 
+  * https://github.com/muennich/sxiv/pull/386
+  */
+-#define SEPARATE_BAR_COLORS_PATCH 0
++#define SEPARATE_BAR_COLORS_PATCH 1
+ 
+ /* Allows the window title to be set via a command line flag during runtime. Also see
+  * the window title patch that sets the title dynamically. A set title will override that.

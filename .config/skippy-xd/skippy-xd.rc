@@ -1,0 +1,19 @@
+[general]
+updateFreq = 100.0
+movePointerOnStart = false
+movePointerOnRaise = false
+movePointerOnSelect = false
+clientDisplayModes = thumbnail
+
+[normal]
+opacity = 245
+tintOpacity = 0
+
+[highlight]
+tintOpacity = 1
+
+[tooltip]
+show = false
+
+[bindings]
+miwMouse2 = close-icccm

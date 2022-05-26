@@ -1,0 +1,28 @@
+diff --git a/patches.def.h b/patches.def.h
+index ade6ed8..b1cf1b5 100644
+--- a/patches.def.h
++++ b/patches.def.h
+@@ -35,7 +35,7 @@
+  * The background image patch takes precedence over this patch.
+  * https://tools.suckless.org/slock/patches/blur-pixelated-screen/
+  */
+-#define BLUR_PIXELATED_SCREEN_PATCH 0
++#define BLUR_PIXELATED_SCREEN_PATCH 1
+ 
+ /* This patch introduces an additional color to indicate the state of Caps Lock.
+  * https://tools.suckless.org/slock/patches/capscolor/
+@@ -77,7 +77,7 @@
+ /* This patch draws the dwm logo which changes color based on the state.
+  * https://tools.suckless.org/slock/patches/dwmlogo/
+  */
+-#define DWM_LOGO_PATCH 0
++#define DWM_LOGO_PATCH 1
+ 
+ /* This patch allows for a command to be run after a specified number of incorrect attempts.
+  * https://tools.suckless.org/slock/patches/failure-command/
+@@ -142,4 +142,4 @@
+ /* This patch adds the ability to get colors via Xresources.
+  * https://tools.suckless.org/slock/patches/xresources/
+  */
+-#define XRESOURCES_PATCH 0
++#define XRESOURCES_PATCH 1

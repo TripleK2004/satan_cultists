@@ -1,0 +1,9 @@
+[Unit]
+Description=Update the system once a day without user prompts
+
+[Timer]
+OnCalendar=*-*-* 6,9,12,18:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

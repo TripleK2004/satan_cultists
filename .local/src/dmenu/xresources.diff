@@ -1,0 +1,31 @@
+diff --git a/patch/xresources.c b/patch/xresources.c
+index cdb1631..1947ab2 100644
+--- a/patch/xresources.c
++++ b/patch/xresources.c
+@@ -21,13 +21,13 @@ readxresources(void)
+ 		else
+ 			fonts[0] = strdup(fonts[0]);
+ 		#endif // PANGO_PATCH
+-		if (XrmGetResource(xdb, "dmenu.background", "*", &type, &xval))
++		if (XrmGetResource(xdb, ".background", "*", &type, &xval))
+ 			colors[SchemeNorm][ColBg] = strdup(xval.addr);
+-		if (XrmGetResource(xdb, "dmenu.foreground", "*", &type, &xval))
++		if (XrmGetResource(xdb, ".foreground", "*", &type, &xval))
+ 			colors[SchemeNorm][ColFg] = strdup(xval.addr);
+-		if (XrmGetResource(xdb, "dmenu.selbackground", "*", &type, &xval))
++		if (XrmGetResource(xdb, ".foreground", "*", &type, &xval))
+ 			colors[SchemeSel][ColBg] = strdup(xval.addr);
+-		if (XrmGetResource(xdb, "dmenu.selforeground", "*", &type, &xval))
++		if (XrmGetResource(xdb, ".background", "*", &type, &xval))
+ 			colors[SchemeSel][ColFg] = strdup(xval.addr);
+ 		if (XrmGetResource(xdb, "dmenu.outbackground", "*", &type, &xval))
+ 			colors[SchemeOut][ColBg] = strdup(xval.addr);
+@@ -40,7 +40,7 @@ readxresources(void)
+ 			colors[SchemeMid][ColFg] = strdup(xval.addr);
+ 		#endif // MORECOLOR_PATCH
+ 		#if BORDER_PATCH
+-		if (XrmGetResource(xdb, "dmenu.bordercolor", "*", &type, &xval))
++		if (XrmGetResource(xdb, ".foreground", "*", &type, &xval))
+ 			colors[SchemeBorder][ColBg] = strdup(xval.addr);
+ 		#endif // BORDER_PATCH
+ 		#if HIGHLIGHT_PATCH || FUZZYHIGHLIGHT_PATCH

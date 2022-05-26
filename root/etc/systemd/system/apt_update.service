@@ -1,0 +1,8 @@
+[Unit]
+Description=Update the system once a day without user prompts
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=sh -c "apt update && apt upgrade -y"

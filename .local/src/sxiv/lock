@@ -1,0 +1,5 @@
+commit d244d4f527893208fc2fa67ae51b32b1d2332659 (HEAD -> master, origin/master, origin/HEAD)
+Author: Bakkeby <bakkeby@gmail.com>
+Date:   Tue Sep 7 19:04:42 2021 +0200
+
+    fifo: better workaround for animated webp support

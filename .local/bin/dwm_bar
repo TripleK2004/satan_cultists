@@ -1,0 +1,62 @@
+#!/bin/sh
+
+ws=" "
+
+vol(){
+vol=$(amixer get Master \
+     | sed -nE '/Front Left/s/(.*)(\[[0-9]{1,3}%\])(.*)/\2/p')
+    
+  echo " ^c#cc99cc^  $vol ^c#ffffff^ $ws  "
+}
+
+clk(){ 
+date=$(date "+%d %b (%a) %l:%M %p")
+  printf " ^c#66cccc^  $date "
+}
+
+cpu(){
+  read cpu a b c previdle rest < /proc/stat
+prevtotal=$((a+b+c+previdle))
+  sleep 0.5
+  read cpu a b c idle rest < /proc/stat
+total=$((a+b+c+idle))
+cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
+  printf " ^c#f2777a^  $cpu %% "
+}
+
+net(){
+interface=$(nmcli connection show \
+	  | sed -n '2p' \
+	  | awk '{print $NF}')
+R1=$(cat /sys/class/net/"$interface"/statistics/rx_bytes)
+T1=$(cat /sys/class/net/"$interface"/statistics/tx_bytes)
+  sleep 1
+R2=$(cat /sys/class/net/"$interface"/statistics/rx_bytes)
+T2=$(cat /sys/class/net/"$interface"/statistics/tx_bytes)
+TBPS=$(expr "$T2" - "$T1")
+RBPS=$(expr "$R2" - "$R1")
+TKBPS=$(expr "$TBPS" / 1024)
+RKBPS=$(expr "$RBPS" / 1024)
+  printf " ^c#6699cc^  $RKBPS kb  $TKBPS kb "
+}
+
+ram(){
+ram=$(free -h \
+     | sed -nE '2s/([^ ]* *){2}([^ ]*).*/\2/p')
+  printf " ^c#99cc99^  $ram "
+}
+
+tmp(){
+tmp=$(sensors \
+      | sed -nE '/CPU/s/(.*)\+(.*)/\2/p')
+  printf " ^c#ffffff^  $ws ^c#ffcc66^ $tmp "
+}
+
+case $1 in
+    vol ) vol ;;
+    clk ) clk ;;
+    cpu ) cpu ;;
+    net ) net ;;
+    ram ) ram ;;
+    tmp ) tmp ;;
+esac

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+read file
+rfile=`realpath "$file"`
+
+case "$1" in
+
+"Escape")   exit 1 ;;
+
+"C-d")	    rm "$rfile" ;;
+
+"C-g")	    gimp "$rfile" & ;;
+
+"C-j")	    mogrify -format jpg "$rfile" ;;
+
+"C-c")	    convert "$rfile" -resize 1920x1080\! "$rfile" ;;
+
+"C-w")	    jpg2ff < "$rfile" \
+            > ~/.cache/st_bg.ff; \
+	    say refstbg; \
+	    pidof st | xargs kill -s USR1; \
+
+esac

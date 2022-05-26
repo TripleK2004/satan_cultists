@@ -1,0 +1,29 @@
+diff --git a/window.c b/window.c
+index 6956895..ae40563 100644
+--- a/window.c
++++ b/window.c
+@@ -155,7 +155,7 @@ void win_init(win_t *win)
+ 	res_man = XResourceManagerString(e->dpy);
+ 	db = res_man != NULL ? XrmGetStringDatabase(res_man) : None;
+ 
+-	f = win_res(db, RES_CLASS ".font", "monospace-8");
++	f = win_res(db, RES_CLASS ".font", "JetBrainsMono Nerd Font:pixelsize=15:antialias=true");
+ 	win_init_font(e, f);
+ 
+ 	#if WINDOW_TITLE_PATCH
+@@ -169,12 +169,12 @@ void win_init(win_t *win)
+ 	win_alloc_color(e, bg, &win->bg);
+ 	win_alloc_color(e, fg, &win->fg);
+ 	#if MARK_BORDER_PATCH
+-	mk = win_res(db, RES_CLASS ".mark", "orange");
++	mk = win_res(db, RES_CLASS ".foreground", "orange");
+ 	win_alloc_color(e, mk, &win->mark);
+ 	#endif // MARK_BORDER_PATCH
+ 	#if SEPARATE_BAR_COLORS_PATCH
+-	barbg = win_res(db, RES_CLASS ".barbackground", NULL);
+-	barfg = win_res(db, RES_CLASS ".barforeground", NULL);
++	barbg = win_res(db, RES_CLASS ".background", NULL);
++	barfg = win_res(db, RES_CLASS ".foreground", NULL);
+ 	#if SWAP_BAR_COLORS_PATCH
+ 	win_alloc_color(e, barbg ? barbg : bg, &win->barbg);
+ 	win_alloc_color(e, barfg ? barfg : fg, &win->barfg);

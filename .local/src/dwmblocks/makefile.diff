@@ -1,0 +1,12 @@
+diff --git a/Makefile b/Makefile
+index 99db3d6..35600c0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,6 +1,6 @@
+ .POSIX:
+ 
+-PREFIX = /usr/local
++PREFIX = $(HOME)/.local
+ CC = gcc
+ 
+ dwmblocks: main.o

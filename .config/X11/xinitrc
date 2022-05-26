@@ -1,0 +1,4 @@
+hsetroot -solid \#15171c
+xsetroot -cursor_name left_ptr
+xrdb -load ~/.config/X11/Xresources
+exec dbus-run-session dwm

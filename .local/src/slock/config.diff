@@ -1,0 +1,17 @@
+diff --git a/config.def.h b/config.def.h
+index 9f7baac..c368598 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -67,9 +67,9 @@ ResourcePref resources[] = {
+ 		#if BACKGROUND_IMAGE_PATCH
+ 		{ "bg_image",     STRING,  &background_image },
+ 		#endif // BACKGROUND_IMAGE_PATCH
+-		{ "locked",       STRING,  &colorname[INIT] },
+-		{ "input",        STRING,  &colorname[INPUT] },
+-		{ "failed",       STRING,  &colorname[FAILED] },
++		{ "color0",       STRING,  &colorname[INIT] },
++		{ "color4",       STRING,  &colorname[INPUT] },
++		{ "color1",       STRING,  &colorname[FAILED] },
+ 		#if CAPSCOLOR_PATCH
+ 		{ "capslock",     STRING,  &colorname[CAPS] },
+ 		#endif // CAPSCOLOR_PATCH

@@ -1,0 +1,167 @@
+#!/bin/sh
+
+#
+# SYSTEM
+#
+printf "
+refind
+firmware-linux
+initramfs-tools
+firmware-atheros
+firmware-realtek
+linux-image-amd64
+linux-headers-amd64"
+
+#
+# X
+#
+printf "
+xinit
+x11-utils
+xbacklight
+x11-xserver-utils
+xserver-xorg-core
+xserver-xorg-video-intel
+xserver-xorg-input-libinput"
+
+#
+# DEVEL
+#
+printf "
+gcc
+make
+libc6-dev
+libxft-dev
+libx11-dev
+libexif-dev
+librsvg2-dev
+libxrandr-dev
+libimlib2-dev
+libharfbuzz-dev
+libxinerama-dev"
+
+#
+# ADMINISTRATION
+#
+printf "
+kbd
+ssh
+zsh
+zstd
+sudo
+psmisc
+locales
+alsa-utils
+lm-sensors
+dbus-broker
+policykit-1
+i965-va-driver
+network-manager
+mesa-vulkan-drivers"
+
+#
+# GTK_QT
+#
+printf "
+at-spi2-core
+librsvg2-common
+gtk2-engines-pixbuf
+gtk2-engines-murrine
+gnome-themes-standard
+qt5-gtk2-platformtheme
+gnome-themes-extra-data"
+
+#
+# THEMES_FONTS
+#
+printf "
+fonts-noto
+fonts-noto-cjk
+fonts-noto-extra
+papirus-icon-theme
+breeze-cursor-theme
+fonts-noto-cjk-extra"
+
+#
+# APPLICATIONS_UTILS
+#
+printf "
+jq
+mpv
+exa
+git
+zip
+fzf
+man
+gimp
+htop
+less
+file
+slop
+curl
+stow
+maim
+tmux
+xclip
+aria2
+patch
+atool
+unzip
+ranger
+yt-dlp
+jmtpfs
+ffmpeg
+neovim
+zathura
+libsane1
+farbfeld
+hsetroot
+apt-file
+ueberzug
+flameshot
+highlight
+gpg-agent
+mpv-mpris
+playerctl
+libgumbo1
+libqt5xdg3
+imagemagick
+python3-pip
+qutebrowser
+poppler-utils
+intel-gpu-tools
+ca-certificates
+telegram-desktop
+ffmpegthumbnailer
+zsh-autosuggestions"
+
+#
+# 3RD_PARTY_APPS&UTILS
+#
+: '
+ytfzf
+spotify
+starship
+ff-blank
+megasync
+spicetify
+zsh-plugins
+ff-composite
+fluent-reader
+masterpdfeditor5 
+zathura-pdf-mupdf
+mpv_persistent_properties'
+
+#
+# ZATHURA-MUPDF_BUILD_DEPS
+#
+: '
+meson
+cmake
+zathura-dev
+libmujs-dev
+libmupdf-dev
+libgumbo-dev
+libjbig2dec0-dev
+libopenjp2-7-dev
+libtesseract-dev'
