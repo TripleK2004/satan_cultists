@@ -1,5 +1,0 @@
-commit 9036c899a99e0ae11c7dc4048c77c32283a70905 (HEAD -> master, origin/master, origin/HEAD)
-Author: bakkeby <bakkeby@gmail.com>
-Date:   Mon Mar 28 16:15:30 2022 +0200
-
-    config.mk: adding reference to -D_NETBSD_SOURCE and -D_BSD_SOURCE

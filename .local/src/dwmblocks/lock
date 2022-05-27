@@ -1,5 +1,0 @@
-commit 65bfd0eef541502e01e6b9501d841777ac2f6d19 (HEAD -> main, origin/main, origin/HEAD)
-Author: Utkarsh Verma <utkarshverma@protonmail.com>
-Date:   Sun May 1 15:27:30 2022 +0530
-
-    Improve UTF8 trimming algorithm

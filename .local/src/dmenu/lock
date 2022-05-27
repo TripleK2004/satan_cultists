@@ -1,5 +1,0 @@
-commit 872a3623d0f4b0953252f9ff7a160343612a1063 (HEAD -> master, origin/master, origin/HEAD)
-Author: bakkeby <bakkeby@gmail.com>
-Date:   Tue Apr 26 23:19:03 2022 +0200
-
-    fuzzyhighlight: correcting sign for deducting lrpad
