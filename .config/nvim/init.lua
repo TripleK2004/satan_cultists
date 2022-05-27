@@ -65,8 +65,8 @@ setkey('n', '<A-e>', ':Lexplore<CR>', {noremap = true})
 vim.cmd [[
 
 autocmd TabNew * call feedkeys(":Lexplore\<CR>", 'n')
-autocmd BufWritePost $HOME/.local/src/dwm/dwm.c !cd $HOME/.local/src/dwm; make install
-autocmd BufWritePost $HOME/.local/src/dwm/config.h !cd $HOME/.local/src/dwm; make install
+autocmd BufWritePost $HOME/.local/src/dwm/dwm.c !cd $HOME/.local/src/dwm; make install && xsetroot -name fsignal:2
+autocmd BufWritePost $HOME/.local/src/dwm/config.h !cd $HOME/.local/src/dwm; make install && xsetroot -name fsignal:2
 autocmd BufWritePost $HOME/PiroGramming/main.c !cd $HOME/PiroGramming/; gcc main.c && ./a.out
 
 ]]
