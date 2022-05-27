@@ -5,7 +5,7 @@ dmenu="$(printf ":b 鈴 Sleep\n:b  Shutdown\n:b  Logout\n:b ﰇ Restart " 
 	| dmenu -c -p "RUN " -l 7 -fn "JetBrainsMono Nerd Font:size=13" -bw 3)"
 
 case $dmenu in
-    ":b  Logout" ) xsetroot -name fsignal:2 ;;
+    ":b  Logout" ) xsetroot -name fsignal:1 ;;
     ":b  Shutdown" ) systemctl poweroff ;;
     ":b 鈴 Sleep" ) systemctl suspend ;;
     ":b ﰇ Restart " ) systemctl reboot
