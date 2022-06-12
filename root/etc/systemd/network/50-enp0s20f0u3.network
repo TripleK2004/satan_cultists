@@ -1,0 +1,6 @@
+[Match]
+Name=enp0s20f0u3
+
+[Network]
+Gateway=192.168.147.208
+Address=192.168.147.82/24
