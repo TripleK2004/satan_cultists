@@ -1,4 +1,8 @@
 set recolor                     "true"
+set window-title-page		"true"
+set window-title-basename	"true"
+set window-title-home-tilde	"true"
+
 set font			"JetBrainsMono Nerd Font 13"
 
 set notification-bg             "#99cc99"
