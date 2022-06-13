@@ -1,5 +1,5 @@
 [Match]
-Name=enp0s20f0u3
+Name=usb0
 
 [Network]
 Gateway=192.168.147.208
