@@ -6,10 +6,11 @@ movePointerOnSelect = false
 clientDisplayModes = thumbnail
 
 [normal]
-opacity = 245
+opacity = 255
 tintOpacity = 0
 
 [highlight]
+tint = #2d2d2d
 tintOpacity = 1
 
 [tooltip]
