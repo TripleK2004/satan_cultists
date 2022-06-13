@@ -14,7 +14,7 @@ esac
 
 refstbg(){
     [ ! -e ~/.cache/st_layer.ff ] && \
-      ff-blank 1920 1080 5376 5888 7168 59000 > ~/.cache/st_layer.ff
+      ff-blank 1920 1080 11520 11520 11520 59000 > ~/.cache/st_layer.ff
     ff-composite < ~/.cache/st_bg.ff ~/.cache/st_layer.ff 0,0,2 > ~/.cache/st_wallpaper.ff
 }
 
