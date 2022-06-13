@@ -63,12 +63,12 @@ mesa-vulkan-drivers"
 # GTK_QT
 #
 printf "
+adwaita-qt
 at-spi2-core
 librsvg2-common
 gtk2-engines-pixbuf
 gtk2-engines-murrine
 gnome-themes-standard
-qt5-gtk2-platformtheme
 gnome-themes-extra-data"
 
 #

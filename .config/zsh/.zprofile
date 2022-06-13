@@ -8,7 +8,7 @@ export EDITOR=nvim
 export MOZ_WEBRENDER=1
 export LIBVA_DRIVER_NAME=i965
 export MOZ_DISABLE_RDD_SANDBOX=1
-export QT_QPA_PLATFORMTHEME=gtk2
+export QT_QPA_PLATFORMTHEME=qt5ct
 export PATH=$HOME/.local/bin:$PATH
 export TMUX_TMPDIR=$XDG_STATE_HOME
 export MANPAGER="nvim -c 'Man!' -o -"
@@ -19,5 +19,6 @@ export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
 
 #=-[AUTOLOGIN]-=#
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
+  sleep 1
   exec startx "$XDG_CONFIG_HOME/X11/xinitrc" &> /dev/null
 fi
