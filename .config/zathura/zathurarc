@@ -3,6 +3,7 @@ set window-title-page		"true"
 set window-title-basename	"true"
 set window-title-home-tilde	"true"
 
+set guioptions			""
 set font			"JetBrainsMono Nerd Font 13"
 
 set notification-bg             "#99cc99"
