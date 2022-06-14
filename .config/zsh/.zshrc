@@ -24,6 +24,8 @@ _comp_options+=(globdots)
 #=-[ALIASES]-=#
 alias \
       ll='exa -lah' \
+      sx='exec startx "$XDG_CONFIG_HOME/X11/xinitrc" &> /dev/null' \
+      wl='exec dbus-run-session river &> /tmp/river.log'
 
 alias \
       pkgr='sudo apt remove' \
