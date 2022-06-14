@@ -1,12 +1,13 @@
 --[[https://vonheikemen.github.io/devlog/tools/configuring-neovim-using-lua/]]--
 
-require('xresources')
+require('kolors')
 require('statusline')
 
 --[[ OPTS ]]--
 local set = vim.opt
 
 set.number = true
+set.cursorline = true
 set.relativenumber = true
 
 set.wrap = true
@@ -70,6 +71,3 @@ autocmd BufWritePost $HOME/.local/src/dwm/config.h !cd $HOME/.local/src/dwm; mak
 autocmd BufWritePost $HOME/PiroGramming/main.c !cd $HOME/PiroGramming/; gcc main.c && ./a.out
 
 ]]
-
---[[ COLORS ]]--
---vim.highlight.create("StatusLine", { ctermbg = "white", ctermfg = "black" })
