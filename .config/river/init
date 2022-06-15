@@ -5,6 +5,9 @@ waybar &
 riverctl map normal Super Space spawn "bemenu-run -H 40 --ch 24 --fn 'JetBrainsMono Nerd Font [10]' -p 'debian  ' --tb '#2d2d2d' --tf '#f2777a' --fb '#2d2d2d' --ff '#6699cc' --nb '#2d2d2d' --nf '#747369' --hb '#2d2d2d' --hf '#d3d0c8' --ab '#2d2d2d' --af '#747369'"
 
 riverctl map normal Super Return spawn foot
+riverctl map normal Super+Control Return spawn "say tmux; foot -e tmux attach -t TMUX"
+
+riverctl map normal Super+Shift B spawn qutebrowser
 
 riverctl map normal Super W close
 
@@ -71,9 +74,9 @@ do
     riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl s +5%'
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl s 5%-'
     
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'pamixer -i 1'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'pamixer -d 1'
-    riverctl map $mode None XF86AudioMute         spawn 'pamixer --toggle-mute'
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixet set Master 5%+'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'amixet set Master 5%-'
+    riverctl map $mode None XF86AudioMute         spawn 'amixet set Master toggle'
 
 done
 
