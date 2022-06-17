@@ -53,10 +53,19 @@ window#waybar {
 }
 
 #window {
-    font-size: 14;
+    font-size: 14px;
     color: #d3d0c8;
     margin-top: 8px;
     margin-bottom: 2px;
+    background-color: #2d2d2d;
+}
+
+#pulseaudio {
+    color: #d3d0c8;
+    padding: 0px 5px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    border: 2px solid #d3d0c8;
     background-color: #2d2d2d;
 }
 
@@ -69,6 +78,6 @@ window#waybar {
 }
 
 #tray {
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 2px;
 }

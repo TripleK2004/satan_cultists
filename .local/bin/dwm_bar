@@ -3,10 +3,9 @@
 ws=" "
 
 vol(){
-vol=$(amixer get Master \
-     | sed -nE '/Front Left/s/(.*)(\[[0-9]{1,3}%\])(.*)/\2/p')
+vol=$(pamixer --get-volume)
     
-  echo " ^c#cc99cc^  $vol ^c#ffffff^ $ws   "
+  echo " ^c#cc99cc^  [${vol}]% ^c#ffffff^ $ws   "
 }
 
 clk(){ 

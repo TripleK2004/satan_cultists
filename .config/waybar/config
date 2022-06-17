@@ -7,10 +7,16 @@
   ],
   "modules-right": [
     "tray",
+    "pulseaudio",
     "clock"
   ],
   "river/window": {
     "max-length": 165
+  },
+  "pulseaudio": {
+    "format": "{volume}% ",
+    "format-muted": "muted  ",
+    "scroll-step": 1,
   },
   "clock": {
     "format": "{:%a %d-%m %T}",
@@ -19,6 +25,6 @@
   },
   "tray": {
     "icon-size": 25,
-    "spacing": 5
+    "spacing": 8
   }
 }

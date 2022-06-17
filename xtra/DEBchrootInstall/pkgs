@@ -54,10 +54,13 @@ locales
 alsa-utils
 lm-sensors
 dbus-broker
+wireplumber
 policykit-1
+pipewire-pulse
 i965-va-driver
 network-manager
-mesa-vulkan-drivers"
+mesa-vulkan-drivers
+pipewire-audio-client-libraries"
 
 #
 # GTK_QT
