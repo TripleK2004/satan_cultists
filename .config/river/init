@@ -4,8 +4,10 @@ waybar &
 
 riverctl map normal Super Space spawn "bemenu-run -H 34 --ch 24 --fn 'JetBrainsMono Nerd Font [10]' -p 'debian  ' --tb '#2d2d2d' --tf '#f2777a' --fb '#2d2d2d' --ff '#6699cc' --nb '#2d2d2d' --nf '#747369' --hb '#2d2d2d' --hf '#d3d0c8' --ab '#2d2d2d' --af '#747369'"
 
-riverctl map normal Super Return spawn foot
-riverctl map normal Super+Control Return spawn "say tmux; foot -e tmux attach -t TMUX"
+riverctl map normal Super Return spawn st
+riverctl map normal Super+Control Return spawn "say tmux; st -e tmux attach -t TMUX"
+riverctl map normal Super+Shift Period spawn "jpg2ff < $(find /home/triplek/MEGA/wallhaven -type f -printf "%T+\t%p\n" | sort -r | awk '{print $2}' | shuf -n 1) > ~/.cache/st_bg.ff; say refstbg; pidof st | xargs kill -s USR1"
+riverctl map normal Super+Shift Comma spawn "jpg2ff < $(find /home/triplek/MEGA/WallHaven -type f -printf "%T+\t%p\n" | sort -r | awk '{print $2}' | shuf -n 1) > ~/.cache/st_bg.ff; say refstbg; pidof st | xargs kill -s USR1"
 
 riverctl map normal Super+Shift B spawn qutebrowser
 
