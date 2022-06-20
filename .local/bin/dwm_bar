@@ -3,9 +3,9 @@
 ws=" "
 
 vol(){
-vol=$(pamixer --get-volume)
+vol=$(pamixer --get-volume-human)
     
-  echo " ^c#cc99cc^  [${vol}]% ^c#ffffff^ $ws   "
+  echo " ^c#cc99cc^  [${vol}] ^c#ffffff^ $ws   "
 }
 
 clk(){ 
