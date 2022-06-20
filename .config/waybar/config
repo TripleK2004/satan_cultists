@@ -7,16 +7,21 @@
   ],
   "modules-right": [
     "tray",
-    "pulseaudio",
+    "custom/volume",
     "clock"
   ],
   "river/window": {
     "max-length": 165
   },
-  "pulseaudio": {
-    "format": "{volume}% ",
-    "format-muted": "muted  ",
-    "scroll-step": 1,
+  "custom/volume": {
+    "exec": "pamixer --get-volume-human",
+    "interval": "once",
+    "signal": 1,
+    "format": "{} ",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -SIGRTMIN+1 waybar",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%; pkill -SIGRTMIN+1 waybar",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%; pkill -SIGRTMIN+1 waybar",
+    "tooltip": false
   },
   "clock": {
     "format": "{:%a %d-%m %T}",
