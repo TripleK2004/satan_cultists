@@ -89,7 +89,7 @@ riverctl background-color 0x2d2d2d
 riverctl border-color-focused 0xd3d0c8
 riverctl border-color-unfocused 0x747369
 
-riverctl set-repeat 50 300
+riverctl set-repeat 30 200
 
 riverctl default-layout rivertile
 rivertile -view-padding 4 -outer-padding 4 -main-ratio 0.55
