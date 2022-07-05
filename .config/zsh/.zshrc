@@ -10,21 +10,26 @@ HISTFILE=$XDG_DATA_HOME/zsh/history
 
 #=-[TAB COMPLETE]-=#
 setopt autocd
-autoload compinit
-autoload bashcompinit
 zstyle ':completion:*' menu select cache-path \
 				    $XDG_DATA_HOME/zsh/zcompcache
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 				    'r:|[._-]=* r:|=*' \
 				    'l:|=* r:|=*'
 zmodload zsh/complist
+
+autoload compinit
 compinit -d $XDG_DATA_HOME/zsh/zcompdump
 _comp_options+=(globdots)
+
+autoload bashcompinit
+bashcompinit
+source ~/.local/share/bash-completion/completions/riverctl
 
 #=-[ALIASES]-=#
 alias \
       ll='exa -lah' \
-      sx='exec startx "$XDG_CONFIG_HOME/X11/xinitrc" &> /dev/null' \
+      killmux='tmux kill-session -t TMUX' \
+      sx='exec startx "$XDG_CONFIG_HOME/X11/xinitrc" &> /tmp/dwm.log' \
       wl='exec dbus-run-session river &> /tmp/river.log'
 
 alias \
@@ -85,7 +90,7 @@ stove()
 yt()
 {
   choice=$(ytfzf -tL "$1")
-  yt-dlp -f 247+251 "$choice"
+  yt-dlp -f 247+251 -o "~/VIDs/%(id)s.%(ext)s" "$choice"
 }
 
 #=-[ZSH PLUGINS]-=#
