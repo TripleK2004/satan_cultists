@@ -17,7 +17,7 @@
     "exec": "pamixer --get-volume-human",
     "interval": "once",
     "signal": 1,
-    "format": "{} ",
+    "format": "{}",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -SIGRTMIN+1 waybar",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%; pkill -SIGRTMIN+1 waybar",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%; pkill -SIGRTMIN+1 waybar",
