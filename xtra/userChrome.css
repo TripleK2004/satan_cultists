@@ -43,7 +43,7 @@
     --button-active-bgcolor:                    var(--uc-hover-colour)    !important;
     --arrowpanel-border-radius:                 var(--uc-border-radius)   !important;
     --toolbarbutton-border-radius:              var(--uc-border-radius)   !important;
-    --tab-block-margin: 1px !important;
+    --tab-block-margin: 2px !important;
     
 }
 
@@ -191,6 +191,6 @@ window,
 @media (min-width: 1000px) { 
     
     #TabsToolbar { margin-left: var(--uc-urlbar-width) !important; }
-    #nav-bar { margin: calc((var(--urlbar-min-height) * -1) - 7px) calc(100vw - var(--uc-urlbar-width)) 0 0 !important; }
+    #nav-bar { margin: calc((var(--urlbar-min-height) * -1) - 8px) calc(100vw - var(--uc-urlbar-width)) 0 0 !important; }
 
 }
