@@ -67,4 +67,4 @@ vim.highlight.create("WildMenu", { ctermbg = "blue", ctermfg = "black" })
 
 vim.highlight.create("netrwDir", { ctermbg = "NONE", ctermfg = "252" })
 vim.highlight.create("netrwPlain", { ctermbg = "NONE", ctermfg = "blue" })
-vim.highlight.create("netrwSlash", { ctermbg = "NONE", ctermfg = "magenta" })--
+vim.highlight.create("netrwSlash", { ctermbg = "NONE", ctermfg = "magenta" })
