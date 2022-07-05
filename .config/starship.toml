@@ -1,9 +1,9 @@
 format = "  $directory$battery$character"
 
 [character]
-success_symbol = "[   ](bold green)"
-error_symbol = "[   ](bold red)"
-vicmd_symbol = "[   ](bold blue)"
+success_symbol = "[ ](bold red)[  ](bold green)"
+error_symbol = "[ ](bold red)[  ](bold red)"
+vicmd_symbol = "[ ](bold red)[  ](bold blue)"
 
 [battery]
 full_symbol = " "
