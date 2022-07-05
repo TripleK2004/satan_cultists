@@ -1,7 +1,7 @@
 #!/bin/sh
 # https://help.ubuntu.com/lts/installation-guide/powerpc/apds04.html
 
-printf "deb http://mirror.i3d.net/debian bookworm main contrib non-free"> /etc/apt/sources.list
+printf "deb http://mirror.i3d.net/debian testing main contrib non-free"> /etc/apt/sources.list
 
 printf "APT::Install-Recommends \"false\";
 APT::Install-Suggests \"false\";
