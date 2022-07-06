@@ -1,4 +1,4 @@
-xset r rate 200 30
+xset r rate 300 30
 hsetroot -solid \#2d2d2d
 xsetroot -cursor_name left_ptr
 xrdb -load ~/.config/X11/Xresources
