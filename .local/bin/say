@@ -38,7 +38,7 @@ esac
 }
 
 _tmux(){
-tmux ls > /dev/null
+tmux ls 2> /dev/null
 if [ $? = 1 ]; then
 printf "Starting TMUX session\n" && \
     tmux new -s TMUX -d && \
