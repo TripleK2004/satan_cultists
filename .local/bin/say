@@ -47,6 +47,8 @@ printf "Starting TMUX session\n" && \
     tmux rename-window -t TMUX:2 ' file_manager' && \
     tmux new-window -t TMUX && \
     tmux rename-window -t TMUX:3 ' text_editor' && \
+    tmux new-window -t TMUX && \
+    tmux rename-window -t TMUX:4 ' music_player' && \
     tmux send-keys -t TMUX:2 'while true; do; ranger && clear; done' C-m && \
     tmux send-keys -t TMUX:3 'cd ~/.git-repos/satan_cultists && while true; do; nvim; done' C-m && \
     tmux select-window -t 1
